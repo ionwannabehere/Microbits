@@ -207,10 +207,11 @@ while True:
         while nHrt:
             if len(eventHandList) > 0:
                 if eventHandList[0] == "G" or eventHandList[0] == "P1":
+                    e = eventHandList[0]
                     clrR = True
                     while clrR:
                         if len(eventHandList) > 1:
-                            if eventHandList[1] == "G" or eventHandList[1] == "P1":
+                            if eventHandList[1] == e:
                                 eventHandList.pop(1)
                             else:
                                 clrR = False
